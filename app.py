@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 BOT_TOKEN = "8560880538:AAEErDIpS-eOgu38aIr3v3tmUxsh3w5Ef7M"
-CHAT_ID = "1003269524862"
+CHAT_ID = "-1003269524862"
 
 @app.route("/send", methods=["POST"])
 def send_message():
@@ -30,4 +30,4 @@ def home():
     return jsonify({"message": "API do Bot Telegram está ativa!"})
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
